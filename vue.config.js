@@ -4,6 +4,10 @@
 // })
 
 module.exports = {
-  publicPath: '/geiger-tools-installation/'
+  publicPath: '/geiger-tools-installation/',
+
+  transpileDependencies: [
+    'vuetify'
+  ]
 }
 
