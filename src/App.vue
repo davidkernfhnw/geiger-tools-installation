@@ -16,6 +16,11 @@
       
         <router-view></router-view>
     </v-main>
+    <v-footer>
+      <v-row class="d-flex justify-center">
+          <p class="pt-4">GEIGER Footer</p>
+      </v-row>
+    </v-footer>
   </v-app>
 </template>
 
