@@ -10,7 +10,7 @@
           <v-btn color="green" class="white--text" 
             >Download APK<v-icon class="ml-3">mdi-android</v-icon>
           </v-btn>
-          <a href="/GEIGER-Toolbox.apk" download="geiger">download</a>
+          <a href="public/GEIGER-Toolbox.apk" download="geiger">download</a>
  
         </div>
       </v-card>
