@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <v-app-bar fixed app>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon v-if="$route.name.match('instructions')" @click="goBack()"><v-icon large>mdi-arrow-left</v-icon></v-app-bar-nav-icon>
+      <v-icon v-else large color="transparent">mdi-menu</v-icon>
+      <v-spacer></v-spacer>
       <v-app-bar-title>
         <img
           src=".//assets/geiger_logo.png"
@@ -10,11 +12,12 @@
           width="120"
         />
       </v-app-bar-title>
-      <v-app-bar-title>Tools Installation</v-app-bar-title>
+      <h3>Tools Installation</h3>
+      <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
       
-        <router-view></router-view>
+        <router-view ></router-view>
     </v-main>
     <v-footer>
       <v-row class="d-flex justify-center">
@@ -33,6 +36,11 @@ export default {
   data: () => ({
     //
   }),
+  methods: {
+   goBack(){
+     this.$router.go(-1)
+   }
+  }
 };
 </script>
 
